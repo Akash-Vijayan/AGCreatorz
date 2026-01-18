@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AG Creatorz — Premium Digital Studio</title>
+    <meta name="description" content="AG Creatorz — Crafting high-performance web engineering and cinematic brand narratives." />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Outfit', 'sans-serif'], 
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              brandPrimary: {
+                DEFAULT: '#7C3AED',
+                light: '#A78BFA',
+                dark: '#5B21B6',
+              },
+              brandSurface: {
+                light: '#FAFAFA',
+                dark: '#050505',
+              },
+              brandCard: {
+                light: '#FFFFFF',
+                dark: '#0A0A0A',
+              }
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Adjusted clamp to be slightly more conservative to prevent navigation overlap */
+        --fluid-text-huge: clamp(2.4rem, 12vw, 7.8rem);
+      }
+
+      html {
+        font-size: 16px; 
+        scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #FAFAFA;
+        color: #111;
+        margin: 0;
+        overflow-x: hidden;
+        transition: background-color 0.4s ease;
+      }
+
+      html.dark body {
+        background-color: #050505;
+        color: #fff;
+      }
+
+      /* Premium Texture Overlay */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+        opacity: 0.04;
+        filter: contrast(150%) brightness(100%);
+      }
+
+      .text-huge { font-size: var(--fluid-text-huge); line-height: 0.85; letter-spacing: -0.05em; }
+      
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 10px; }
+      
+      .glass-nav {
+        background: rgba(250, 250, 250, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .dark .glass-nav {
+        background: rgba(5, 5, 5, 0.85);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      @media (max-width: 640px) {
+        :root {
+          --fluid-text-huge: clamp(2.8rem, 16vw, 4.8rem);
+        }
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.1/",
+        "react": "https://aistudiocdn.com/react@^19.2.1",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+        "@google/genai": "https://esm.run/@google/genai"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="selection:bg-brandPrimary selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
