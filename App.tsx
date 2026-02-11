@@ -106,7 +106,7 @@ const App: React.FC = () => {
         onBack={() => handleNavigate('home')}
       />
       
-      <AiCompanion currentTheme={theme} onSetTheme={setTheme} />
+      {/* <AiCompanion currentTheme={theme} onSetTheme={setTheme} /> */}
       <FloatingControls />
 
       <main className="relative">
