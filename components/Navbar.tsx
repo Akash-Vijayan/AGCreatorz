@@ -110,14 +110,19 @@ const Navbar: React.FC<NavbarProps> = ({
               </AnimatePresence>
 
               <div 
-                className="flex items-center gap-3 md:gap-4 cursor-pointer group" 
-                onClick={(e) => handleLinkClick(e, 'home', 'hero')}
-              >
-                <img src={LOGO_PATH} alt="AG" className="h-7 md:h-9 w-auto dark:invert group-hover:scale-105 transition-transform duration-500" />
-                <span className="font-display font-black text-lg md:text-xl tracking-tighter text-black dark:text-white uppercase leading-none">
-                  AG CREATORZ<span className="text-brandPrimary">.</span>
-                </span>
-              </div>
+  className="flex items-center gap-4 cursor-pointer group" 
+  onClick={(e) => handleLinkClick(e, 'home', 'hero')}
+>
+  <img 
+    src="/logo/aglogo.PNG" 
+    alt="AG" 
+    className="h-11 md:h-12 w-auto invert dark:invert-0 transition-transform duration-500 group-hover:scale-105" 
+  />
+
+  <span className="font-display font-black text-xl md:text-2xl tracking-tight text-black dark:text-white uppercase leading-none">
+    AG CREATORZ<span className="text-brandPrimary">.</span>
+  </span>
+</div>
             </div>
             
             <div className="hidden lg:flex items-center space-x-10">
