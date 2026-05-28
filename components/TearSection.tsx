@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import Hero from './Hero';
@@ -26,12 +25,16 @@ const TearSection: React.FC<TearSectionProps> = ({ onContact }) => {
   const rightX = useTransform(smoothProgress, [0, 0.7], ["0%", "110%"]);
   const opacity = useTransform(smoothProgress, [0.6, 0.9], [1, 0]);
 
+  // Dynamically disable pointer events and display:none so they don't block clicks on buttons below
+  const pointerEvents = useTransform(smoothProgress, (p) => p > 0.65 ? "none" : "auto");
+  const display = useTransform(smoothProgress, (p) => p > 0.85 ? "none" : "block");
+
   // Jagged Edge Paths
   const leftJagged = "polygon(0% 0%, 50.1% 0%, 48% 15%, 52% 35%, 48% 55%, 52% 75%, 48% 90%, 50.1% 100%, 0% 100%)";
   const rightJagged = "polygon(49.9% 0%, 100% 0%, 100% 100%, 49.9% 100%, 48% 90%, 52% 75%, 48% 55%, 52% 35%, 48% 15%)";
 
   return (
-    <div ref={containerRef} className="relative h-[200vh] z-20">
+    <div ref={containerRef} className="relative h-[160vh] z-40">
       <div className="sticky top-0 h-screen w-full overflow-hidden pointer-events-none">
         
         <div className="absolute inset-0 z-20 pointer-events-none flex">
@@ -41,10 +44,12 @@ const TearSection: React.FC<TearSectionProps> = ({ onContact }) => {
               x: leftX,
               opacity,
               clipPath: leftJagged,
+              pointerEvents,
+              display,
             }}
-            className="absolute inset-0 w-full h-full pointer-events-auto bg-white dark:bg-[#050505]"
+            className="absolute inset-0 w-full h-full pointer-events-auto bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000"
           >
-            <div className="w-full h-full shadow-[20px_0_50px_rgba(0,0,0,0.1)] overflow-hidden">
+            <div className="w-full h-full shadow-[20px_0_50px_rgba(130,77,105,0.15)] overflow-hidden">
               <Hero onContact={onContact} isInsideTear={true} />
             </div>
           </motion.div>
@@ -55,10 +60,12 @@ const TearSection: React.FC<TearSectionProps> = ({ onContact }) => {
               x: rightX,
               opacity,
               clipPath: rightJagged,
+              pointerEvents,
+              display,
             }}
-            className="absolute inset-0 w-full h-full pointer-events-auto bg-white dark:bg-[#050505]"
+            className="absolute inset-0 w-full h-full pointer-events-auto bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000"
           >
-            <div className="w-full h-full shadow-[-20px_0_50px_rgba(0,0,0,0.1)] overflow-hidden">
+            <div className="w-full h-full shadow-[-20px_0_50px_rgba(130,77,105,0.15)] overflow-hidden">
               <Hero onContact={onContact} isInsideTear={true} />
             </div>
           </motion.div>

@@ -1,4 +1,3 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 import { PORTFOLIO_ITEMS } from '../constants';
@@ -30,21 +29,21 @@ const Portfolio: React.FC<PortfolioProps> = ({ onViewAll }) => {
 
   if (isMobile) {
     return (
-      <section id="portfolio" className="relative py-24 bg-[#0A0514] overflow-hidden">
+      <section id="portfolio" className="relative py-24 bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000 overflow-hidden">
          <div className="max-w-[95rem] mx-auto px-6">
-            <div className="space-y-6 mb-16">
+            <div className="space-y-6 mb-16 text-left">
               <div className="flex items-center gap-4">
                 <Target size={14} className="text-brandPrimary" />
                 <span className="text-brandPrimary font-black text-[9px] tracking-[0.5em] uppercase">Visual Archive // 02</span>
               </div>
-              <h2 className="text-5xl font-display font-bold tracking-tighter leading-none uppercase text-white">
+              <h2 className="text-4xl sm:text-5xl font-display font-bold tracking-tighter leading-none uppercase text-black dark:text-white">
                 SELECTED<br/>
-                <span className="text-brandPrimary italic font-serif font-normal lowercase">work</span>
+                <span className="text-brandPrimary italic font-serif font-normal lowercase tracking-normal pl-1 inline-block">work</span>
               </h2>
             </div>
 
             <div className="grid gap-12">
-              {limitedItems.map((item, index) => (
+               {limitedItems.map((item, index) => (
                 <PortfolioCard key={item.id} item={item} index={index} />
               ))}
             </div>
@@ -66,21 +65,21 @@ const Portfolio: React.FC<PortfolioProps> = ({ onViewAll }) => {
   }
 
   return (
-    <section ref={targetRef} id="portfolio" className="relative h-[300vh] bg-[#0A0514] transition-colors duration-1000 overflow-clip">
+    <section ref={targetRef} id="portfolio" className="relative h-[300vh] bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000 overflow-clip">
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         
         <motion.div 
           style={{ x: bgX }}
-          className="absolute inset-0 flex items-center justify-start pointer-events-none opacity-[0.03] whitespace-nowrap z-0"
+          className="absolute inset-0 flex items-center justify-start pointer-events-none opacity-[0.03] dark:opacity-[0.02] whitespace-nowrap z-0"
         >
-          <span className="text-[25vw] font-display font-black uppercase tracking-tighter leading-none select-none text-white">
+          <span className="text-[25vw] font-display font-black uppercase tracking-tighter leading-none select-none text-black dark:text-white">
             ARCHIVE ARCHIVE ARCHIVE
           </span>
         </motion.div>
 
         <motion.div style={{ x: xSpring }} className="flex gap-20 px-[8vw] items-center z-10">
           
-          <div className="flex-shrink-0 w-[450px] flex flex-col justify-center mr-20">
+          <div className="flex-shrink-0 w-[450px] flex flex-col justify-center mr-20 text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,11 +89,11 @@ const Portfolio: React.FC<PortfolioProps> = ({ onViewAll }) => {
                 <Target size={14} className="text-brandPrimary" />
                 <span className="text-brandPrimary font-black text-[9px] tracking-[0.5em] uppercase">Visual Artifacts // 02</span>
               </div>
-              <h2 className="text-8xl font-display font-bold tracking-tighter leading-[0.85] mb-8 uppercase text-white">
+              <h2 className="text-7xl md:text-8xl font-display font-bold tracking-tighter leading-[0.95] mb-8 uppercase text-black dark:text-white">
                 SELECTED<br/>
-                <span className="text-brandPrimary italic font-serif font-normal lowercase">work</span>
+                <span className="text-brandPrimary italic font-serif font-normal lowercase tracking-normal pl-1 inline-block">work</span>
               </h2>
-              <p className="text-base text-white/30 max-w-sm leading-relaxed border-l border-brandPrimary/20 pl-6">
+              <p className="text-base text-black/50 dark:text-white/35 max-w-sm leading-relaxed border-l border-brandPrimary/20 pl-6 font-light">
                 Refined digital assets where structural precision meets cinematic depth.
               </p>
             </motion.div>
@@ -106,9 +105,9 @@ const Portfolio: React.FC<PortfolioProps> = ({ onViewAll }) => {
 
           <div className="flex-shrink-0 w-[40vw] flex flex-col items-center justify-center">
              <motion.div 
-               whileHover={{ scale: 1.05 }}
-               onClick={onViewAll}
-               className="group cursor-pointer text-center"
+                whileHover={{ scale: 1.05 }}
+                onClick={onViewAll}
+                className="group cursor-pointer text-center"
              >
                <div className="w-32 h-32 rounded-full border border-brandPrimary/20 flex items-center justify-center mb-8 mx-auto group-hover:bg-brandPrimary group-hover:border-brandPrimary transition-all duration-700 shadow-xl">
                  <ArrowUpRight size={32} className="text-brandPrimary group-hover:text-white transition-colors" />
@@ -167,7 +166,7 @@ const PortfolioCard: React.FC<{ item: any; index: number }> = ({ item, index }) 
     >
       <motion.div
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-        className="aspect-[10/13] lg:aspect-[10/14] overflow-hidden rounded-[2.5rem] lg:rounded-[3rem] bg-white/5 border border-white/5 relative shadow-[0_30px_100px_rgba(0,0,0,0.5)] transition-colors duration-700 group-hover:border-brandPrimary/40"
+        className="aspect-[10/13] lg:aspect-[10/14] overflow-hidden rounded-[2.5rem] lg:rounded-[3rem] bg-brandCard-light dark:bg-white/5 border border-black/5 dark:border-white/5 relative shadow-xl dark:shadow-[0_30px_100px_rgba(0,0,0,0.5)] transition-all duration-700 group-hover:border-brandPrimary/40"
       >
         {/* Dynamic Image with subtle parallax */}
         <motion.img 
@@ -188,7 +187,7 @@ const PortfolioCard: React.FC<{ item: any; index: number }> = ({ item, index }) 
         {/* Gradient Scrim */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent opacity-100 lg:opacity-90 z-10" />
 
-        {/* Content Layers with Z-Depth */}
+        {/* Content Layers with Z-Depth - Keep white text since it's on a dark image scrim background */}
         <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end z-30" style={{ transformStyle: 'preserve-3d' }}>
            <motion.span 
               style={{ transform: 'translateZ(30px)' }}
@@ -199,7 +198,7 @@ const PortfolioCard: React.FC<{ item: any; index: number }> = ({ item, index }) 
            
            <motion.h3 
               style={{ transform: 'translateZ(50px)' }}
-              className="text-3xl lg:text-5xl font-display font-bold text-white mb-6 uppercase tracking-tighter leading-[0.85]"
+              className="text-3xl lg:text-5xl font-display font-bold text-white mb-6 uppercase tracking-tighter leading-[0.85] text-left"
            >
               {item.title}
            </motion.h3>

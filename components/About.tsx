@@ -55,7 +55,7 @@ const About: React.FC = () => {
             >
               <div className="space-y-8">
                 <p className="text-xl md:text-3xl font-light text-black/70 dark:text-white/40 leading-tight border-l-2 border-brandPrimary pl-10">
-                  <span className="text-black dark:text-white font-bold">AG Creatorz</span> is a creative powerhouse led by <span className="text-brandPrimary dark:text-brandPrimary-light font-medium">{PROFILE_CONTENT.name}</span>. We specialize in transforming abstract ideas into high-impact digital realities.
+                  <span className="text-black dark:text-white font-bold">AG Viztek Studio</span> is a creative powerhouse led by <span className="text-brandPrimary dark:text-brandPrimary-light font-medium">{PROFILE_CONTENT.name}</span>. We specialize in transforming abstract ideas into high-impact digital realities.
                 </p>
                 <p className="text-lg md:text-xl font-light text-black/50 dark:text-white/30 leading-relaxed max-w-2xl pl-10">
                   Our mission is to bridge the gap between technical complexity and creative storytelling. We don't just build websites or edit videos; we engineer experiences that capture attention and drive meaningful engagement.

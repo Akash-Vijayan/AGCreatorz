@@ -1,4 +1,3 @@
-
 import { Service, PortfolioItem, Testimonial, FaqItem } from './types';
 
 export const CONTACT_INFO = {
@@ -9,113 +8,113 @@ export const CONTACT_INFO = {
 };
 
 export const BRAND_QUOTES = [
-  "Turning abstract visions into digital reality. ✨",
-  "Design that speaks louder than words. 🎨",
-  "Precision engineering for the modern web. 🚀",
-  "Elevating brands through cinematic storytelling. 💎",
-  "Your digital evolution starts here. 📖",
-  "Minimalism meets maximum impact. ⚡"
+  "We turn your ideas into beautiful websites. ✨",
+  "Designs that make your brand stand out. 🎨",
+  "Super fast websites built to work perfectly. 🚀",
+  "Engaging videos that people love to watch. 💎",
+  "Start building your online presence today. 📖",
+  "Simple designs with a big impact. ⚡"
 ];
 
 export const HERO_CONTENT = {
-  headline: "Building Digital Experiences That Stand Out",
-  subhead: "High-performance web development, graphic design, and video editing services focused on clarity, creativity, and quality.",
+  headline: "We Build Websites, Designs, and Videos That Stand Out",
+  subhead: "Simple, clean, and fast websites, logos, and videos. We help your brand grow and look amazing online.",
   primaryCta: "Let’s Work Together",
   secondaryCta: "See Our Work"
 };
 
 export const PROFILE_CONTENT = {
   name: "Akash",
-  title: "Full-Stack Creator & Digital Strategist",
-  intro: "I’m Akash, the founder of AG Creatorz. I bridge the gap between technical complexity and creative excellence, delivering digital solutions that don't just look good—they perform with absolute precision.",
+  title: "Full-Stack Developer, Designer & Video Editor",
+  intro: "I'm Akash, the founder of AG Viztek Studio. I write fast code, design clean graphics, and edit high-quality videos. My goal is to make things that look beautiful and work perfectly for your business.",
   button: "Curated Portfolio"
 };
 
 export const SERVICES: Service[] = [
   {
     id: 'web',
-    title: "Web Engineering",
-    description: "Developing blazing-fast, responsive, and SEO-optimized digital ecosystems that serve as the cornerstone of your online identity.",
+    title: "Web Development",
+    description: "We build super fast websites that look great on phones and computers, and help you get found on Google.",
     price: "From ₹2,500",
     icon: 'web',
     details: {
-      headline: "Advanced Web Solutions",
-      subhead: "We build more than just websites. We engineer high-performance platforms that drive conversions and offer unparalleled user experiences.",
+      headline: "Beautiful & Fast Websites",
+      subhead: "We don't just build websites. We create easy-to-use pages that load instantly and help your business get more customers.",
       features: [
-        "Custom React & Next.js Platforms",
-        "High-Conversion Landing Pages",
-        "Performance & SEO Optimization",
-        "Interactive UI/UX Prototypes"
+        "Custom Websites",
+        "One-Page Websites",
+        "Google Search Setup",
+        "Website Layout Drafts"
       ],
       process: [
-        "Brand DNA Discovery",
-        "Wireframing & Logic Mapping",
-        "Full-Stack Development",
-        "Quality Assurance & Launch"
+        "Learning Your Needs",
+        "Designing the Layout",
+        "Coding the Website",
+        "Testing & Launching"
       ],
       whyChooseUs: [
-        "Blazing fast load times",
-        "Mobile-first philosophy",
-        "Scalable clean code",
-        "Strategic SEO integration"
+        "Super fast loading speed",
+        "Works perfectly on mobile phones",
+        "Clean and easy-to-update code",
+        "SEO ready to get found on Google"
       ]
     }
   },
   {
     id: 'design',
-    title: "Brand Design",
-    description: "Crafting iconic visual identities and marketing collaterals that ensure your brand cuts through the digital noise with absolute clarity.",
+    title: "Graphic & Logo Design",
+    description: "We design outstanding logos, social media posts, and brand graphics that make your business look professional and unique.",
     price: "From ₹500",
     icon: 'design',
     details: {
-      headline: "Visual Identity Design",
-      subhead: "Strategic design that communicates value. We translate your brand's core mission into a cohesive and stunning visual language.",
+      headline: "Professional Logo & Brand Design",
+      subhead: "Good design tells your story. We create a beautiful and matching look for all your business graphics and social media.",
       features: [
-        "Logos & Brand Identity Systems",
-        "Strategic Social Media Assets",
-        "Premium Thumbnails & Creatives",
-        "Marketing & Print Collateral"
+        "Logos & Matching Styles",
+        "Social Media Graphics",
+        "Premium YouTube Thumbnails",
+        "Brochures & Business Cards"
       ],
       process: [
-        "Visual Research & Moodboarding",
-        "Conceptual Sketching",
-        "Vector Refinement",
-        "Asset Export & Guidelines"
+        "Finding Style Ideas",
+        "Drawing Initial Drafts",
+        "Polishing Final Designs",
+        "Delivering Final Image Files"
       ],
       whyChooseUs: [
-        "Unique, non-templated designs",
-        "Consistent brand messaging",
-        "High-impact visual strategy",
-        "Market-ready deliverables"
+        "100% custom, original designs",
+        "Matching look for your brand",
+        "Eye-catching design styles",
+        "High-quality ready-to-use files"
       ]
     }
   },
   {
     id: 'video',
-    title: "Post-Production",
-    description: "Transforming raw footage into engaging, cinematic narratives designed to maximize audience retention and social reach.",
+    title: "Cinematic Video Editing",
+    description: "We edit your raw videos into clean, engaging stories for YouTube, Instagram Reels, or ads that grab attention.",
     price: "From ₹1,000",
     icon: 'video',
     details: {
-      headline: "Cinematic Video Editing",
-      subhead: "Storytelling refined. We use professional color grading, sound design, and motion graphics to make your content unforgettable.",
+      headline: "Engaging Video Editing",
+      subhead: "We make your videos stand out. We use smooth cuts, beautiful colors, clear sound effects, and clean titles to keep viewers watching.",
       features: [
-        "Viral Short-form (Reels/TikToks)",
-        "High-Production YouTube Edits",
-        "Commercial & Product Promos",
-        "Motion Graphics & Titles"
+        "Instagram Reels & TikTok Videos",
+        "High-Quality YouTube Videos",
+        "Short Ads & Product Videos",
+        "Animated Titles & Texts"
       ],
       process: [
-        "Script & Pacing Analysis",
-        "Dynamic Rough Cut",
-        "Color Grading & SFX",
-        "Final Render & Polish"
+        "Story & Speed Check",
+        "First Draft Editing",
+        "Adding Colors & Sound Effects",
+        "Final Polish & Delivery"
       ],
       whyChooseUs: [
-        "Retention-focused editing",
-        "Professional color science",
-        "Custom sound landscapes",
-        "Platform-specific optimization"
+        "Engaging edits to hold viewers",
+        "Beautiful video colors",
+        "Custom sound effects & music",
+        "Ready for YouTube and Instagram"
       ]
     }
   }
@@ -137,22 +136,22 @@ export const TESTIMONIALS: Testimonial[] = [
     id: '1',
     name: "Vikram Malhotra",
     role: "Marketing Director",
-    quote: "Akash understands the pulse of digital branding. The web platform he built for us became our primary engine for growth within weeks.",
+    quote: "Akash is amazing at what he does. The website he built for us is super fast and helped us get a lot of new customers quickly.",
     image: "https://i.pravatar.cc/150?u=vikram"
   },
   {
     id: '2',
     name: "Sarah Jenkins",
     role: "Content Creator",
-    quote: "The attention to detail in their video editing is insane. My audience retention numbers have never been higher.",
+    quote: "The editing quality is top-notch. My YouTube video views and watch time increased a lot after working with them.",
     image: "https://i.pravatar.cc/150?u=sarah"
   }
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
-  { id: '1', question: "What is your typical project timeline?", answer: "Timelines vary: Brand Design (5-10 days), Web Development (15-30 days), and Video Editing (2-4 days). We prioritize quality without compromising on efficiency." },
-  { id: '2', question: "How do you handle revisions?", answer: "We provide 3 major rounds of revisions for every project phase. Our goal is to ensure the final deliverable exceeds your initial expectations." },
-  { id: '3', question: "Do you offer post-launch support?", answer: "Yes, we provide 30 days of complimentary technical support for all web projects and are always available for future updates." }
+  { id: '1', question: "What is your typical project timeline?", answer: "Timelines: Graphic Design takes 5-10 days, Web Development takes 15-30 days, and Video Editing takes 2-4 days. We work fast to deliver high-quality results." },
+  { id: '2', question: "How do you handle revisions?", answer: "We offer 3 rounds of changes for each step. Our goal is to make sure you are 100% happy with the final result." },
+  { id: '3', question: "Do you offer post-launch support?", answer: "Yes, we give you 30 days of free help and support after your website goes live, and we are always here for future updates." }
 ];
 
 export const LOGO_PATH = "/mnt/data/A_logo_design_in_blac";

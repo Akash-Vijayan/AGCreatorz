@@ -23,11 +23,17 @@ const Contact: React.FC = () => {
             </h2>
             <div className="space-y-8 mt-16">
               {[
-                { icon: <Mail size={24} />, text: CONTACT_INFO.email, sub: null },
-                { icon: <Instagram size={24} />, text: "@ag.creators", sub: null },
-                { icon: <MessageCircle size={24} />, text: CONTACT_INFO.phone, sub: CONTACT_INFO.phoneNote }
+                { icon: <Mail size={24} />, text: CONTACT_INFO.email, sub: null, href: `mailto:${CONTACT_INFO.email}` },
+                { icon: <Instagram size={24} />, text: "@ag.creators", sub: null, href: "https://instagram.com/ag.creators" },
+                { icon: <MessageCircle size={24} />, text: CONTACT_INFO.phone, sub: CONTACT_INFO.phoneNote, href: `https://wa.me/${CONTACT_INFO.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Hi AG Viztek Studio! I visited your website and would love to discuss a project with you.")}` }
               ].map((link, i) => (
-                <div key={i} className="flex items-center gap-6 group cursor-pointer">
+                <a 
+                  key={i} 
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-6 group cursor-pointer"
+                >
                   <div className="w-16 h-16 rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-brandPrimary group-hover:bg-brandPrimary group-hover:text-white transition-all">
                     {link.icon}
                   </div>
@@ -35,7 +41,7 @@ const Contact: React.FC = () => {
                     <span className="font-bold text-xl break-all">{link.text}</span>
                     {link.sub && <span className="text-[10px] font-mono text-brandPrimary uppercase tracking-widest">{link.sub}</span>}
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           </motion.div>

@@ -85,27 +85,21 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             />
             
             <div className="relative flex flex-col items-center">
-               {!imageError ? (
-                 <img 
-                   src={LOGO_PATH} 
-                   alt="AG Creatorz Logo" 
-                   className="w-24 h-24 object-contain mb-4 dark:invert"
-                   onError={() => setImageError(true)}
-                 />
-               ) : (
-                 <div className="w-24 h-24 bg-brandPrimary/10 text-brandPrimary border border-brandPrimary/20 rounded-full flex items-center justify-center font-bold text-2xl mb-4 shadow-xl">
-                   AG
-                 </div>
-               )}
+               {/* Custom premium square question-mark logo, adaptive in light/dark themes */}
+               <div className="w-20 h-20 rounded-2xl border-4 border-sky-600 bg-sky-50 dark:border-orange-500 dark:bg-stone-950 flex items-center justify-center shadow-2xl mb-6 transition-all duration-500 animate-pulse">
+                 <span className="font-display font-black text-3xl text-sky-600 dark:text-orange-500 transition-colors duration-500">
+                   ?
+                 </span>
+               </div>
 
                {stage >= 2 ? (
                   <motion.h1
-                    className="text-2xl font-display font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-brandPrimary to-brandPrimary-dark"
+                    className="text-2xl font-display font-bold tracking-widest text-black dark:text-white uppercase"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                   >
-                    AG CREATORZ
+                    AG VIZTEK STUDIO
                   </motion.h1>
                 ) : null}
             </div>

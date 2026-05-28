@@ -132,7 +132,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onBack }) => {
             <div className="grid grid-cols-1 gap-3">
               {[
                 { icon: <Mail size={16} />, label: "Email", val: CONTACT_INFO.email, href: `mailto:${CONTACT_INFO.email}` },
-                { icon: <MessageCircle size={16} />, label: "WhatsApp", val: CONTACT_INFO.phone, href: `https://wa.me/${CONTACT_INFO.phone.replace(/[^0-9]/g, '')}` }
+                { icon: <MessageCircle size={16} />, label: "WhatsApp", val: CONTACT_INFO.phone, href: `https://wa.me/${CONTACT_INFO.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent("Hi AG Viztek Studio! I visited your website and would love to discuss a project with you.")}` }
               ].map((item, i) => (
                 <motion.a
                   key={i}
@@ -172,7 +172,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onBack }) => {
             <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-[#0A0A0A] h-full p-8 md:p-12 rounded-[2.5rem] border border-black/5 dark:border-white/5 shadow-xl relative overflow-hidden"
+              className="bg-brandCard-light dark:bg-brandCard-dark h-full p-8 md:p-12 rounded-[2.5rem] border border-black/5 dark:border-white/5 shadow-xl relative overflow-hidden"
             >
               {status === 'success' ? (
                 <div className="h-full flex flex-col items-center justify-center text-center space-y-6 py-12">
@@ -229,7 +229,7 @@ const ContactPage: React.FC<ContactPageProps> = ({ onBack }) => {
                       <div className="flex items-center gap-4 text-[7px] font-mono opacity-20 uppercase tracking-[0.5em]">
                         <span>End-to-End Encryption</span>
                         <div className="w-1 h-1 rounded-full bg-brandPrimary" />
-                        <span>AG.CREATORZ Gateway</span>
+                        <span>AG.VIZTEK Gateway</span>
                       </div>
                     </div>
                   </div>

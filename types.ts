@@ -40,7 +40,7 @@ export type PricingTier = 'basic' | 'pro' | 'custom';
 export type PaymentFrequency = 'monthly' | 'onetime';
 
 // Navigation Types
-export type ViewState = 'home' | 'services-hub' | 'service-detail' | 'about-page' | 'contact-page' | 'portfolio-page';
+export type ViewState = 'home' | 'services-hub' | 'service-detail' | 'about-page' | 'contact-page' | 'portfolio-page' | 'pricing-page';
 
 // Theme Types
 export type Theme = 'light' | 'dark' | 'system';

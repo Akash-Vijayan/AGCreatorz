@@ -64,7 +64,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => {
           </h1>
           <div className="max-w-3xl pt-10">
             <p className="text-xl md:text-2xl text-black/50 dark:text-white/40 leading-relaxed font-light">
-              AG Creatorz is a premium digital engineering practice specialized in translating complex visions into <span className="text-black dark:text-white font-bold">high-conversion digital artifacts</span>. We operate at the intersection of structure and creativity.
+              AG Viztek Studio is a premium digital engineering practice specialized in translating complex visions into <span className="text-black dark:text-white font-bold">high-conversion digital artifacts</span>. We operate at the intersection of structure and creativity.
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ onBack }) => {
             <div className="space-y-6">
               <h2 className="text-[10px] font-black uppercase tracking-[0.8em] opacity-60">Mission Statement</h2>
               <p className="text-4xl md:text-7xl font-display font-bold leading-[0.9] tracking-tighter uppercase max-w-5xl">
-                To position AG Creatorz as a respected <span className="italic font-serif lowercase font-normal opacity-80">digital brand</span> recognized for precision and modern execution.
+                To position AG Viztek Studio as a respected <span className="italic font-serif lowercase font-normal opacity-80">digital brand</span> recognized for precision and modern execution.
               </p>
             </div>
           </div>

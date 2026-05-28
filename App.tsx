@@ -11,13 +11,14 @@ import TearSection from './components/TearSection';
 import ServiceDetail from './components/ServiceDetail';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import WorkProcess from './components/WorkProcess';
 import Testimonials from './components/Testimonials';
+import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import AiCompanion from './components/AiCompanion';
 import FloatingControls from './components/FloatingControls';
 import { SERVICES } from './constants';
 import { ViewState, Theme } from './types';
+import { ArrowLeft } from 'lucide-react';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(() => {
@@ -119,13 +120,12 @@ const App: React.FC = () => {
               exit={{ opacity: 0 }}
             >
               <TearSection onContact={() => handleNavigate('contact-page')} />
-              <div className="-mt-[100vh]">
-                <Services onSelectService={handleSelectService} />
+              <div className="relative z-20 -mt-[100vh]">
+                <Services onSelectService={handleSelectService} onNavigate={(page) => handleNavigate(page)} />
+                <Portfolio onViewAll={() => handleNavigate('portfolio-page')} />
+                <Testimonials />
+                <ContactStrip onContact={() => handleNavigate('contact-page')} />
               </div>
-              <Portfolio onViewAll={() => handleNavigate('portfolio-page')} />
-              <WorkProcess />
-              <Testimonials />
-              <ContactStrip onContact={() => handleNavigate('contact-page')} />
             </motion.div>
           ) : currentView === 'about-page' ? (
             <AboutPage key="about-view" onBack={() => handleNavigate('home')} />
@@ -140,6 +140,44 @@ const App: React.FC = () => {
               onBack={() => handleNavigate('home')}
               onContact={() => handleNavigate('contact-page')}
             />
+          ) : currentView === 'pricing-page' ? (
+            <motion.div
+              key="pricing-page"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="py-32 bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000 min-h-screen text-black dark:text-white"
+            >
+              <div className="max-w-[85rem] mx-auto px-6">
+                <button
+                  onClick={() => handleNavigate('home')}
+                  className="mb-12 flex items-center gap-2 text-black/40 dark:text-white/40 hover:text-brandPrimary transition-colors group/back font-mono text-[10px] uppercase tracking-widest"
+                >
+                  <ArrowLeft size={16} className="group-hover/back:-translate-x-1.5 transition-transform" />
+                  Return Home
+                </button>
+                <Pricing />
+              </div>
+            </motion.div>
+          ) : currentView === 'services-hub' ? (
+            <motion.div
+              key="services-hub"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="py-32 bg-brandSurface-light dark:bg-brandSurface-dark transition-colors duration-1000 min-h-screen text-black dark:text-white"
+            >
+              <div className="max-w-[90rem] mx-auto px-6 md:px-12">
+                <button
+                  onClick={() => handleNavigate('home')}
+                  className="mb-12 flex items-center gap-2 text-black/40 dark:text-white/40 hover:text-brandPrimary transition-colors group/back font-mono text-[10px] uppercase tracking-widest"
+                >
+                  <ArrowLeft size={16} className="group-hover/back:-translate-x-1.5 transition-transform" />
+                  Return Home
+                </button>
+                <Services onSelectService={handleSelectService} isFullPage={true} />
+              </div>
+            </motion.div>
           ) : null}
         </AnimatePresence>
       </main>

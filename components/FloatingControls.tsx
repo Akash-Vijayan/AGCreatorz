@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUp, MessageCircle } from 'lucide-react';
@@ -29,7 +28,8 @@ const FloatingControls: React.FC = () => {
 
   const openWhatsApp = () => {
     const phone = CONTACT_INFO.phone.replace(/[^0-9]/g, '');
-    window.open(`https://wa.me/${phone}`, '_blank');
+    const message = encodeURIComponent("Hi AG Viztek Studio! I visited your website and would love to discuss a project with you.");
+    window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   };
 
   return (
@@ -45,14 +45,14 @@ const FloatingControls: React.FC = () => {
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
               onClick={openWhatsApp}
-              className="w-14 h-14 bg-white dark:bg-[#111] border border-[#7C3AED]/20 text-[#7C3AED] rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(124,58,237,0.2)] backdrop-blur-xl group transition-colors hover:border-[#7C3AED]/40"
+              className="w-14 h-14 bg-brandCard-light dark:bg-brandCard-dark border border-brandPrimary/20 text-brandPrimary rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(130,77,105,0.2)] backdrop-blur-xl group transition-colors hover:border-brandPrimary/40"
               title="Contact on WhatsApp"
             >
               <MessageCircle size={24} className="group-hover:scale-110 transition-transform" />
               <motion.div 
                 animate={{ scale: [1, 1.2, 1], opacity: [0, 0.3, 0] }}
                 transition={{ repeat: Infinity, duration: 2 }}
-                className="absolute inset-0 bg-[#7C3AED] rounded-full"
+                className="absolute inset-0 bg-brandPrimary rounded-full"
               />
             </motion.button>
 
@@ -64,7 +64,7 @@ const FloatingControls: React.FC = () => {
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
               onClick={scrollToTop}
-              className="w-14 h-14 bg-[#7C3AED] text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(124,58,237,0.3)] group"
+              className="w-14 h-14 bg-brandPrimary text-white rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(130,77,105,0.3)] group"
               title="Scroll to Top"
             >
               <ArrowUp size={24} className="group-hover:-translate-y-1 transition-transform" />

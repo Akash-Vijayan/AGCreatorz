@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Instagram, Linkedin, Facebook, Mail, Phone, MapPin, ArrowUp, ExternalLink } from 'lucide-react';
@@ -24,7 +23,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="relative bg-white dark:bg-[#020202] text-black dark:text-white pt-20 transition-colors duration-1000 overflow-hidden">
+    <footer className="relative bg-brandSurface-light dark:bg-brandSurface-dark text-black dark:text-white pt-20 transition-colors duration-1000 overflow-hidden border-t border-black/5 dark:border-white/5">
       
       <div className="absolute inset-0 opacity-[0.15] dark:opacity-[0.05] pointer-events-none" 
            style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
@@ -36,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           className="flex items-center gap-12"
         >
           {[...tickerItems, ...tickerItems].map((item, i) => (
-            <div key={i} className="flex items-center gap-12">
+            <div key={i} className="flex items-center gap-12 text-left">
               <span className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.4em]">{item}</span>
               <span className="text-brandPrimary text-lg">★</span>
             </div>
@@ -47,12 +46,18 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
       <div className="max-w-[95rem] mx-auto px-6 md:px-12 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 lg:gap-8 mb-24">
           
-          <div className="lg:col-span-4 space-y-8">
-            <div className="flex items-center gap-4">
-              <img src={LOGO_PATH} alt="AG" className="h-12 w-auto dark:invert transition-transform hover:scale-110 duration-500" />
+          <div className="lg:col-span-4 space-y-8 text-left">
+            <div className="flex items-center gap-3">
+              <div className="relative w-10 h-10 rounded-lg overflow-hidden flex items-center justify-center shadow-md transition-all duration-500 hover:scale-105">
+                <img 
+                  src="/logo/aglogo.PNG" 
+                  alt="AG Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="flex flex-col">
-                <h3 className="text-2xl font-display font-black tracking-tighter uppercase leading-none">
-                  AG Creatorz<span className="text-brandPrimary">.</span>
+                <h3 className="text-xl md:text-2xl font-display font-black tracking-tighter uppercase leading-none text-black dark:text-white">
+                  AG VIZTEK STUDIO<span className="text-brandPrimary">.</span>
                 </h3>
               </div>
             </div>
@@ -69,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <motion.a
                   key={i}
                   href={social.link}
-                  whileHover={{ scale: 1.1, backgroundColor: '#7C3AED', color: '#fff' }}
+                  whileHover={{ scale: 1.1, backgroundColor: '#824D69', color: '#fff' }}
                   className="w-10 h-10 rounded-full flex items-center justify-center bg-black/5 dark:bg-white/5 text-black/60 dark:text-white/60 transition-all duration-300"
                 >
                   {social.icon}
@@ -78,7 +83,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 text-left">
             <h4 className="text-[10px] font-black uppercase tracking-[0.5em] text-brandPrimary">Quick Links</h4>
             <ul className="space-y-4">
               {[
@@ -100,7 +105,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 text-left">
             <h4 className="text-[10px] font-black uppercase tracking-[0.5em] text-brandPrimary">Capabilities</h4>
             <ul className="space-y-4">
               {SERVICES.map((s) => (
@@ -113,7 +118,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </ul>
           </div>
 
-          <div className="lg:col-span-4 space-y-10">
+          <div className="lg:col-span-4 space-y-10 text-left">
             <div className="bg-black/5 dark:bg-white/[0.03] p-8 rounded-[2rem] border border-black/5 dark:border-white/5 relative overflow-hidden group">
               <div className="relative z-10">
                 <h4 className="text-sm font-black uppercase tracking-widest mb-2">Weekly Transmission</h4>
@@ -127,7 +132,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-3 gap-6 mb-16 text-left">
           {[
             { icon: <Phone size={20} />, label: CONTACT_INFO.phone, sub: CONTACT_INFO.phoneNote },
             { icon: <Mail size={20} />, label: CONTACT_INFO.email, sub: "Strategic Inquiry" },
@@ -147,7 +152,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
 
         <div className="py-12 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="text-[10px] font-mono text-black/30 dark:text-white/20 uppercase tracking-[0.5em] text-center md:text-left">
-            © 2025 AG Creatorz. Engineered for the future.
+            © 2026 AG Viztek Studio. Engineered for the future.
           </div>
           <motion.button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}

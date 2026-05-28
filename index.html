@@ -4,13 +4,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AG Creatorz — Premium Digital Studio</title>
-    <meta name="description" content="AG Creatorz — Crafting high-performance web engineering and cinematic brand narratives." />
+    <title>AG Viztek Studio — Premium Digital Studio</title>
+    <meta name="description" content="AG Viztek Studio — Crafting high-performance web engineering and cinematic brand narratives." />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Pinyon+Script&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,20 +23,21 @@
               sans: ['Inter', 'sans-serif'],
               display: ['Outfit', 'sans-serif'], 
               serif: ['Playfair Display', 'serif'],
+              script: ['Pinyon Script', 'cursive'],
             },
             colors: {
               brandPrimary: {
-                DEFAULT: '#7C3AED',
-                light: '#A78BFA',
-                dark: '#5B21B6',
+                DEFAULT: '#824D69',
+                light: '#DFB6B2',
+                dark: '#522959',
               },
               brandSurface: {
-                light: '#FAFAFA',
-                dark: '#050505',
+                light: '#FAE5D8',
+                dark: '#180018',
               },
               brandCard: {
                 light: '#FFFFFF',
-                dark: '#0A0A0A',
+                dark: '#2A114B',
               }
             },
           }
@@ -57,7 +58,7 @@
       
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #FAFAFA;
+        background-color: #FAE5D8;
         color: #111;
         margin: 0;
         overflow-x: hidden;
@@ -65,7 +66,7 @@
       }
 
       html.dark body {
-        background-color: #050505;
+        background-color: #180018;
         color: #fff;
       }
 
@@ -87,7 +88,7 @@
       .text-huge { font-size: var(--fluid-text-huge); line-height: 0.85; letter-spacing: -0.05em; }
       
       ::-webkit-scrollbar { width: 5px; }
-      ::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb { background: #824D69; border-radius: 10px; }
       
       .glass-nav {
         background: rgba(250, 250, 250, 0.85);

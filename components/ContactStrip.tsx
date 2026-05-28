@@ -18,7 +18,7 @@ const ContactStrip: React.FC<ContactStripProps> = ({ onContact }) => {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-[#0A0A0A] border border-black/5 dark:border-white/5 rounded-[4rem] p-10 md:p-24 overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.05)] dark:shadow-[0_50px_100px_rgba(124,58,237,0.05)]"
+          className="bg-brandCard-light dark:bg-brandCard-dark border border-black/5 dark:border-white/5 rounded-[4rem] p-10 md:p-24 overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.05)] dark:shadow-[0_50px_100px_rgba(130,77,105,0.05)]"
         >
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             
