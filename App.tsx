@@ -23,12 +23,12 @@ import { ArrowLeft } from 'lucide-react';
 const App: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('theme') as Theme) || 'dark';
+      return (localStorage.getItem('theme') as Theme) || 'light';
     }
-    return 'dark';
+    return 'light';
   });
   
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [currentView, setCurrentView] = useState<ViewState>('home');
   const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null);
 

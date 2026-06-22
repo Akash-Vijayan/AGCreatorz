@@ -1,0 +1,74 @@
+:root {
+  /* Adjusted clamp to be slightly more conservative to prevent navigation overlap */
+  --fluid-text-huge: clamp(2.4rem, 12vw, 7.8rem);
+}
+
+html {
+  font-size: 16px; 
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  scroll-behavior: contain;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FAE5D8;
+  color: #111;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease;
+}
+
+html.dark body {
+  background-color: #180018;
+  color: #fff;
+}
+
+/* Premium Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.04;
+  filter: contrast(150%) brightness(100%);
+}
+
+.text-huge { font-size: var(--fluid-text-huge); line-height: 0.85; letter-spacing: -0.05em; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #824D69; border-radius: 10px; }
+
+.glass-nav {
+  background: rgba(250, 250, 250, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dark .glass-nav {
+  background: rgba(5, 5, 5, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --fluid-text-huge: clamp(2.2rem, 11vw, 3.8rem);
+  }
+}

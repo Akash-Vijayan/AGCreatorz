@@ -34,7 +34,7 @@ const TearSection: React.FC<TearSectionProps> = ({ onContact }) => {
   const rightJagged = "polygon(49.9% 0%, 100% 0%, 100% 100%, 49.9% 100%, 48% 90%, 52% 75%, 48% 55%, 52% 35%, 48% 15%)";
 
   return (
-    <div ref={containerRef} className="relative h-[160vh] z-40">
+    <div ref={containerRef} className="relative h-[160vh] z-40 pointer-events-none">
       <div className="sticky top-0 h-screen w-full overflow-hidden pointer-events-none">
         
         <div className="absolute inset-0 z-20 pointer-events-none flex">

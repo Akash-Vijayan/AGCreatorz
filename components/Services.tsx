@@ -691,7 +691,7 @@ const BentoCard: React.FC<{
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => isInteractive && onSelect(service.id)}
-      className={`p-8 rounded-[2.5rem] bg-brandCard-light dark:bg-brandCard-dark border border-black/5 dark:border-white/5 hover:border-brandPrimary/30 transition-colors duration-500 flex flex-col justify-between min-h-[380px] lg:min-h-[420px] relative group overflow-hidden shadow-md hover:shadow-2xl z-10 ${
+      className={`p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-brandCard-light dark:bg-brandCard-dark border border-black/5 dark:border-white/5 hover:border-brandPrimary/30 transition-colors duration-500 flex flex-col justify-between min-h-[380px] lg:min-h-[420px] relative group overflow-hidden shadow-md hover:shadow-2xl z-10 ${
         isInteractive ? 'cursor-pointer' : 'cursor-default'
       } ${
         service.id === 'web' || service.id === 'seo' || service.id === 'consult'
@@ -807,7 +807,7 @@ const HomepageCard: React.FC<{
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => onSelect(service.id)}
-      className="p-8 rounded-[2.5rem] bg-brandCard-light dark:bg-brandCard-dark border border-black/5 dark:border-white/5 hover:border-brandPrimary/30 transition-colors duration-500 flex flex-col justify-between min-h-[420px] relative group overflow-hidden shadow-md hover:shadow-2xl cursor-pointer z-10"
+      className="p-6 sm:p-8 rounded-[1.5rem] sm:rounded-[2.5rem] bg-brandCard-light dark:bg-brandCard-dark border border-black/5 dark:border-white/5 hover:border-brandPrimary/30 transition-colors duration-500 flex flex-col justify-between min-h-[420px] relative group overflow-hidden shadow-md hover:shadow-2xl cursor-pointer z-10"
     >
       {/* Spotlight Glow Background */}
       <div 

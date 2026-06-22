@@ -26,9 +26,9 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ onBack }) => {
       <div className="max-w-[95rem] mx-auto px-6 md:px-12 relative z-10">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 text-left">
           <div className="space-y-6">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold uppercase tracking-tighter leading-[0.85]">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold uppercase tracking-tighter leading-[0.85]">
               Project <span className="text-brandPrimary italic font-serif lowercase font-normal">archive</span>
             </h1>
             <p className="text-xl text-black/50 dark:text-white/40 max-w-lg leading-relaxed font-light">
@@ -36,14 +36,14 @@ const PortfolioPage: React.FC<PortfolioPageProps> = ({ onBack }) => {
             </p>
           </div>
 
-          <div className="flex flex-col items-end gap-4">
+          <div className="flex flex-col items-start md:items-end gap-4 w-full md:w-auto text-left md:text-right">
             <span className="text-[10px] font-mono text-black/30 dark:text-white/20 uppercase tracking-[0.4em]">Vault Stats</span>
             <div className="flex gap-8">
-              <div className="text-right">
+              <div className="text-left md:text-right">
                 <div className="text-4xl font-display font-black text-brandPrimary">24+</div>
                 <div className="text-[8px] font-mono opacity-40 uppercase tracking-widest">Global Brands</div>
               </div>
-              <div className="text-right">
+              <div className="text-left md:text-right">
                 <div className="text-4xl font-display font-black text-brandPrimary">500+</div>
                 <div className="text-[8px] font-mono opacity-40 uppercase tracking-widest">Assets Built</div>
               </div>
@@ -134,7 +134,7 @@ const ArchiveCard: React.FC<{ item: any; index: number }> = ({ item, index }) =>
     >
       <motion.div
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
-        className="aspect-[10/12] overflow-hidden rounded-[2.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 relative shadow-2xl"
+        className="aspect-[10/12] overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 relative shadow-2xl"
       >
         <motion.img 
           src={item.image} 

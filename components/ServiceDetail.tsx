@@ -59,7 +59,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onContac
                <span className="text-black/40 dark:text-white/30 text-[10px] font-mono font-bold uppercase tracking-widest">Premium Capability Archive</span>
             </motion.div>
             
-            <motion.h1 variants={itemVariants} className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold text-black dark:text-white mb-10 leading-[0.9] tracking-tight uppercase">
+            <motion.h1 variants={itemVariants} className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold text-black dark:text-white mb-10 leading-[0.9] tracking-tight uppercase">
               {service.details.headline}
             </motion.h1>
             
@@ -100,12 +100,12 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onContac
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex items-center gap-6 p-6 rounded-3xl bg-black/[0.02] dark:bg-white/[0.02] border border-transparent hover:border-brandPrimary/30 transition-all group"
+                    className="flex items-start sm:items-center gap-4 sm:gap-6 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-3xl bg-black/[0.02] dark:bg-white/[0.02] border border-transparent hover:border-brandPrimary/30 transition-all group"
                   >
-                    <div className="w-12 h-12 rounded-2xl bg-brandPrimary/10 flex items-center justify-center text-brandPrimary transition-transform group-hover:scale-110">
-                      <CheckCircle size={22} />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brandPrimary/10 flex items-center justify-center text-brandPrimary transition-transform group-hover:scale-110 shrink-0">
+                      <CheckCircle size={20} />
                     </div>
-                    <span className="text-xl font-medium text-black/80 dark:text-white/80">{reason}</span>
+                    <span className="text-lg sm:text-xl font-medium text-black/80 dark:text-white/80">{reason}</span>
                   </motion.div>
                 ))}
               </div>
@@ -119,7 +119,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onContac
                    whileInView={{ opacity: 1, scale: 1 }}
                    viewport={{ once: true }}
                    transition={{ delay: i * 0.1 }}
-                   className="p-8 rounded-[2.5rem] bg-black/[0.03] dark:bg-white/[0.03] border border-black/5 dark:border-white/5 flex flex-col justify-between group hover:border-brandPrimary transition-all backdrop-blur-3xl"
+                   className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-black/[0.03] dark:bg-white/[0.03] border border-black/5 dark:border-white/5 flex flex-col justify-between group hover:border-brandPrimary transition-all backdrop-blur-3xl"
                  >
                    <div className="w-14 h-14 rounded-2xl bg-white dark:bg-black shadow-xl flex items-center justify-center text-brandPrimary mb-6 group-hover:bg-brandPrimary group-hover:text-white transition-all">
                      <Package size={24} />
@@ -145,7 +145,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onContac
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-[3rem] hover:bg-white/10 hover:border-brandPrimary/50 transition-all duration-500 flex flex-col group text-left"
+                  className="bg-white/5 backdrop-blur-md border border-white/10 p-6 md:p-10 rounded-[1.5rem] md:rounded-[3rem] hover:bg-white/10 hover:border-brandPrimary/50 transition-all duration-500 flex flex-col group text-left"
                 >
                   <h3 className="text-xl font-display font-bold text-brandPrimary-light mb-6 flex items-center gap-3">
                     <DollarSign size={18} />

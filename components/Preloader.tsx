@@ -85,11 +85,13 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             />
             
             <div className="relative flex flex-col items-center">
-               {/* Custom premium square question-mark logo, adaptive in light/dark themes */}
-               <div className="w-20 h-20 rounded-2xl border-4 border-sky-600 bg-sky-50 dark:border-orange-500 dark:bg-stone-950 flex items-center justify-center shadow-2xl mb-6 transition-all duration-500 animate-pulse">
-                 <span className="font-display font-black text-3xl text-sky-600 dark:text-orange-500 transition-colors duration-500">
-                   ?
-                 </span>
+               {/* Custom premium square logo, adaptive and consistent with the site branding */}
+               <div className="w-20 h-20 rounded-2xl overflow-hidden shadow-2xl mb-6 transition-all duration-500 animate-pulse flex items-center justify-center bg-white dark:bg-black border border-black/5 dark:border-white/5">
+                 <img 
+                   src="/logo/aglogo.PNG" 
+                   alt="AG Logo" 
+                   className="w-full h-full object-cover"
+                 />
                </div>
 
                {stage >= 2 ? (

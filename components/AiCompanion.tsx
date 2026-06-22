@@ -129,9 +129,9 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={wakeUp}
-            className="fixed bottom-8 left-8 z-[150] flex items-center gap-4 bg-white dark:bg-[#0D0D0D] p-2 pr-6 rounded-2xl shadow-[0_10px_40px_rgba(147,80,115,0.15)] border border-[#935073]/20 group hover:border-[#935073]/40 transition-all"
+            className="fixed bottom-8 left-8 z-[150] flex items-center gap-4 bg-white dark:bg-[#0D0D0D] p-2 pr-6 rounded-2xl shadow-[0_10px_40px_rgba(130,77,105,0.15)] border border-[#824D69]/20 group hover:border-[#824D69]/40 transition-all"
           >
-            <div className="w-10 h-10 rounded-xl bg-[#935073] flex items-center justify-center text-white relative overflow-hidden">
+            <div className="w-10 h-10 rounded-xl bg-[#824D69] flex items-center justify-center text-white relative overflow-hidden">
                <Cpu size={20} />
                <motion.div 
                  animate={{ opacity: [0.1, 0.4, 0.1], x: ['-100%', '100%'] }}
@@ -140,7 +140,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                />
             </div>
             <div className="text-left">
-              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#935073]">Boot AG-Bot</div>
+              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#824D69]">Boot AG-Bot</div>
               <div className="text-[7px] font-mono opacity-40 uppercase tracking-widest leading-none">System Status: Active 🛰️</div>
             </div>
           </motion.button>
@@ -164,9 +164,9 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                   initial={{ opacity: 0, x: -10, scale: 0.9 }}
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -10, scale: 0.9 }}
-                  className="absolute bottom-32 left-0 bg-white dark:bg-black text-black dark:text-white border border-[#935073]/30 px-4 py-2 rounded-xl text-[10px] font-bold shadow-[0_0_30px_rgba(147,80,115,0.2)] flex items-center gap-3 whitespace-nowrap z-50"
+                  className="absolute bottom-32 left-0 bg-white dark:bg-black text-black dark:text-white border border-[#824D69]/30 px-4 py-2 rounded-xl text-[10px] font-bold shadow-[0_0_30px_rgba(130,77,105,0.2)] flex items-center gap-3 whitespace-nowrap z-50"
                 >
-                  <div className="w-1.5 h-1.5 bg-[#935073] rounded-full animate-ping" />
+                  <div className="w-1.5 h-1.5 bg-[#824D69] rounded-full animate-ping" />
                   Request Assistance? 🛰️
                 </motion.div>
               )}
@@ -179,19 +179,19 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                   initial={{ opacity: 0, scale: 0.95, y: 20, transformOrigin: 'bottom left' }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                  className="absolute bottom-28 left-0 w-[90vw] sm:w-[380px] h-[550px] bg-white dark:bg-[#050505] border border-[#935073]/10 shadow-[0_25px_100px_rgba(0,0,0,0.5)] rounded-[2.5rem] overflow-hidden flex flex-col backdrop-blur-3xl"
+                  className="absolute bottom-28 left-0 w-[90vw] sm:w-[380px] h-[550px] bg-white dark:bg-[#050505] border border-[#824D69]/10 shadow-[0_25px_100px_rgba(0,0,0,0.5)] rounded-[2.5rem] overflow-hidden flex flex-col backdrop-blur-3xl"
                 >
                   {/* Robot Header with Status Bar */}
-                  <div className="p-6 border-b border-[#935073]/5 bg-[#935073]/5">
+                  <div className="p-6 border-b border-[#824D69]/5 bg-[#824D69]/5">
                     <div className="flex justify-between items-center mb-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-[#935073]/10 flex items-center justify-center text-[#935073] border border-[#935073]/20">
+                        <div className="w-10 h-10 rounded-xl bg-[#824D69]/10 flex items-center justify-center text-[#824D69] border border-[#824D69]/20">
                           <HelpCircle size={20} />
                         </div>
                         <div>
                           <div className="font-display font-bold text-black dark:text-white uppercase tracking-wider text-[11px]">CLIENT ASSISTANT</div>
-                          <div className="text-[7px] font-mono text-[#935073] uppercase tracking-[0.3em] flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#935073] animate-pulse shadow-[0_0_8px_#935073]" /> Syncing Brilliance
+                          <div className="text-[7px] font-mono text-[#824D69] uppercase tracking-[0.3em] flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#824D69] animate-pulse shadow-[0_0_8px_#824D69]" /> Syncing Brilliance
                           </div>
                         </div>
                       </div>
@@ -205,7 +205,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                           <motion.div 
                             animate={{ width: ['20%', '90%', '20%'] }}
                             transition={{ duration: 3, repeat: Infinity }}
-                            className="h-full bg-[#935073]"
+                            className="h-full bg-[#824D69]"
                           />
                        </div>
                        <div className="flex-1 h-1 bg-black/5 dark:bg-white/5 rounded-full overflow-hidden">
@@ -229,21 +229,21 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                       >
                         <div className={`p-4 rounded-2xl max-w-[90%] text-[13px] leading-relaxed relative ${
                           m.role === 'user' 
-                            ? 'bg-[#935073] text-white rounded-tr-none shadow-lg shadow-[#935073]/20' 
-                            : 'bg-slate-50 dark:bg-white/[0.03] text-black dark:text-white border border-[#935073]/10 rounded-tl-none font-light backdrop-blur-md'
+                            ? 'bg-[#824D69] text-white rounded-tr-none shadow-lg shadow-[#824D69]/20' 
+                            : 'bg-slate-50 dark:bg-white/[0.03] text-black dark:text-white border border-[#824D69]/10 rounded-tl-none font-light backdrop-blur-md'
                         }`}>
                           {m.text}
                           {m.role === 'model' && (
-                             <div className="absolute -left-1 top-0 w-1 h-4 bg-[#935073]/20 rounded-full" />
+                             <div className="absolute -left-1 top-0 w-1 h-4 bg-[#824D69]/20 rounded-full" />
                           )}
                         </div>
                       </motion.div>
                     ))}
                     {isTyping && (
                       <div className="flex gap-2 p-2 items-center">
-                        <div className="w-1.5 h-1.5 bg-[#935073]/40 rounded-full animate-bounce" />
-                        <div className="w-1.5 h-1.5 bg-[#935073]/60 rounded-full animate-bounce [animation-delay:0.2s]" />
-                        <div className="w-1.5 h-1.5 bg-[#935073] rounded-full animate-bounce [animation-delay:0.4s]" />
+                        <div className="w-1.5 h-1.5 bg-[#824D69]/40 rounded-full animate-bounce" />
+                        <div className="w-1.5 h-1.5 bg-[#824D69]/60 rounded-full animate-bounce [animation-delay:0.2s]" />
+                        <div className="w-1.5 h-1.5 bg-[#824D69] rounded-full animate-bounce [animation-delay:0.4s]" />
                       </div>
                     )}
                     <div ref={chatEndRef} />
@@ -262,7 +262,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                           <button
                             key={i}
                             onClick={() => handleGeminiRequest(p.text)}
-                            className="px-3 py-1.5 rounded-xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 text-[9px] font-bold text-[#935073] hover:bg-[#935073] hover:text-white transition-all uppercase tracking-widest shadow-sm"
+                            className="px-3 py-1.5 rounded-xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 text-[9px] font-bold text-[#824D69] hover:bg-[#824D69] hover:text-white transition-all uppercase tracking-widest shadow-sm"
                           >
                             {p.label}
                           </button>
@@ -272,14 +272,14 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                   )}
 
                   {/* Console Input */}
-                  <form onSubmit={(e) => { e.preventDefault(); handleGeminiRequest(chatInput); }} className="p-6 bg-white dark:bg-[#0D0D0D] border-t border-[#935073]/5 flex gap-3">
+                  <form onSubmit={(e) => { e.preventDefault(); handleGeminiRequest(chatInput); }} className="p-6 bg-white dark:bg-[#0D0D0D] border-t border-[#824D69]/5 flex gap-3">
                     <input 
                       value={chatInput} 
                       onChange={e => setChatInput(e.target.value)}
-                      className="flex-1 bg-slate-50 dark:bg-black border border-[#935073]/10 rounded-xl px-5 py-3 text-[13px] outline-none focus:border-[#935073]/50 transition-all text-black dark:text-white placeholder:text-gray-400" 
+                      className="flex-1 bg-slate-50 dark:bg-black border border-[#824D69]/10 rounded-xl px-5 py-3 text-[13px] outline-none focus:border-[#824D69]/50 transition-all text-black dark:text-white placeholder:text-gray-400" 
                       placeholder="Ask AG-Bot a question... 🛰️" 
                     />
-                    <button type="submit" className="w-11 h-11 bg-[#935073] text-white rounded-xl flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all">
+                    <button type="submit" className="w-11 h-11 bg-[#824D69] text-white rounded-xl flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all">
                       <Send size={18} />
                     </button>
                   </form>
@@ -296,7 +296,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                 whileHover={{ y: -5, scale: 1.05 }}
                 animate={{ 
                   y: [0, -8, 0],
-                  boxShadow: isChatOpen ? '0 0 50px rgba(147,80,115,0.3)' : '0 15px 40px rgba(0,0,0,0.1)'
+                  boxShadow: isChatOpen ? '0 0 50px rgba(130,77,105,0.3)' : '0 15px 40px rgba(0,0,0,0.1)'
                 }}
                 transition={{ y: { repeat: Infinity, duration: 4, ease: "easeInOut" } }}
                 className="relative z-20 flex flex-col items-center"
@@ -309,13 +309,13 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                 
                 {/* Robot Head */}
                 <div className={`w-20 h-18 md:w-26 md:h-22 rounded-[1.75rem] flex items-center justify-center transition-all duration-500 border-4 shadow-2xl relative overflow-hidden ${
-                  isChatOpen ? 'bg-white dark:bg-black border-[#935073]' : 'bg-slate-50 dark:bg-[#111] border-slate-100 dark:border-gray-800'
+                  isChatOpen ? 'bg-white dark:bg-black border-[#824D69]' : 'bg-slate-50 dark:bg-[#111] border-slate-100 dark:border-gray-800'
                 }`}>
-                   <div className="absolute inset-2 bg-slate-100 dark:bg-black rounded-xl overflow-hidden flex flex-col items-center justify-center gap-2 border border-[#935073]/5">
+                   <div className="absolute inset-2 bg-slate-100 dark:bg-black rounded-xl overflow-hidden flex flex-col items-center justify-center gap-2 border border-[#824D69]/5">
                       <motion.div 
                         animate={{ y: ['-100%', '100%'] }} 
                         transition={{ repeat: Infinity, duration: 4, ease: "linear" }}
-                        className="absolute inset-0 bg-[#935073]/5 h-1/2 blur-lg pointer-events-none"
+                        className="absolute inset-0 bg-[#824D69]/5 h-1/2 blur-lg pointer-events-none"
                       />
                       <DigitalFace lookX={lookX} lookY={lookY} state={interactionState} />
                    </div>
@@ -323,7 +323,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
 
                 {/* Tiny Robot Body */}
                 <div className="w-12 h-7 bg-slate-100 dark:bg-gray-800 rounded-b-2xl border-x-2 border-b-2 border-slate-200 dark:border-gray-700 mt-[-2px] relative shadow-sm">
-                   <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-5 h-1.5 bg-[#935073]/40 rounded-full" />
+                   <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-5 h-1.5 bg-[#824D69]/40 rounded-full" />
                 </div>
               </motion.div>
 
@@ -332,7 +332,7 @@ const AiCompanion: React.FC<AiCompanionProps> = ({ currentTheme, onSetTheme }) =
                 {isMenuOpen && !isChatOpen && (
                   <motion.div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-10 flex flex-col items-center gap-4 z-10">
                     {[
-                      { icon: <MessageSquare size={16} />, label: 'HELP', action: () => setIsChatOpen(true), color: 'bg-[#935073]' },
+                      { icon: <MessageSquare size={16} />, label: 'HELP', action: () => setIsChatOpen(true), color: 'bg-[#824D69]' },
                       { icon: <Zap size={16} />, label: 'GRID', action: () => onSetTheme(currentTheme === 'dark' ? 'light' : 'dark'), color: 'bg-indigo-400' },
                       { icon: <X size={16} />, label: 'SLEEP', action: sleep, color: 'bg-rose-400' },
                     ].map((item, i) => (
@@ -367,7 +367,7 @@ const DigitalFace: React.FC<{ lookX: any, lookY: any, state: string }> = ({ look
     switch (state) {
       case 'happy':
         return (
-          <div className="flex gap-4 text-[#935073] font-black text-2xl leading-none">
+          <div className="flex gap-4 text-[#824D69] font-black text-2xl leading-none">
             <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity }}>^</motion.span>
             <motion.span animate={{ scale: [1, 1.2, 1] }} transition={{ repeat: Infinity }}>^</motion.span>
           </div>
@@ -386,21 +386,21 @@ const DigitalFace: React.FC<{ lookX: any, lookY: any, state: string }> = ({ look
              <motion.div 
                animate={{ rotate: 360 }} 
                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-               className="w-7 h-7 border-2 border-[#935073]/20 border-t-[#935073] rounded-full"
+               className="w-7 h-7 border-2 border-[#824D69]/20 border-t-[#824D69] rounded-full"
              />
-             <span className="text-[7px] font-mono text-[#935073]/60 uppercase tracking-widest">{state === 'scanning' ? 'Scanning' : 'Syncing'}</span>
+             <span className="text-[7px] font-mono text-[#824D69]/60 uppercase tracking-widest">{state === 'scanning' ? 'Scanning' : 'Syncing'}</span>
           </div>
         );
       case 'blink':
         return (
-          <div className="flex gap-6 text-[#935073]/30">
+          <div className="flex gap-6 text-[#824D69]/30">
             <div className="w-5 h-0.5 bg-current rounded-full" />
             <div className="w-5 h-0.5 bg-current rounded-full" />
           </div>
         );
       case 'wave':
         return (
-          <div className="flex gap-5 text-[#935073]">
+          <div className="flex gap-5 text-[#824D69]">
             <motion.div animate={{ rotate: [0, 20, 0] }} className="text-2xl font-black">◕</motion.div>
             <motion.div animate={{ rotate: [0, -20, 0] }} className="text-2xl font-black">◕</motion.div>
           </div>
@@ -408,8 +408,8 @@ const DigitalFace: React.FC<{ lookX: any, lookY: any, state: string }> = ({ look
       default: // normal
         return (
           <div className="flex gap-6 relative">
-            <motion.div style={{ x: lookX, y: lookY }} className="w-3.5 h-3.5 bg-[#935073] rounded-sm shadow-[0_0_12px_rgba(147,80,115,0.5)]" />
-            <motion.div style={{ x: lookX, y: lookY }} className="w-3.5 h-3.5 bg-[#935073] rounded-sm shadow-[0_0_12px_rgba(147,80,115,0.5)]" />
+            <motion.div style={{ x: lookX, y: lookY }} className="w-3.5 h-3.5 bg-[#824D69] rounded-sm shadow-[0_0_12px_rgba(130,77,105,0.5)]" />
+            <motion.div style={{ x: lookX, y: lookY }} className="w-3.5 h-3.5 bg-[#824D69] rounded-sm shadow-[0_0_12px_rgba(130,77,105,0.5)]" />
           </div>
         );
     }
@@ -421,7 +421,7 @@ const DigitalFace: React.FC<{ lookX: any, lookY: any, state: string }> = ({ look
        {state !== 'thinking' && state !== 'scanning' && (
          <motion.div 
            animate={state === 'happy' ? { scaleX: 1.8, scaleY: 2.2 } : { scaleX: 1 }}
-           className="w-5 h-1 bg-[#935073]/30 rounded-full" 
+           className="w-5 h-1 bg-[#824D69]/30 rounded-full" 
          />
        )}
     </div>
